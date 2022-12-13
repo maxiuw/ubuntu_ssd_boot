@@ -49,31 +49,14 @@ logfile="rsync.log"
 # excluded from rsync
 # /swapfile can be big and transfering it is a waste of time,
 # not having a swapfile backup makes some errors at boot and shutdown.
-# excludedByUser='/export,"/home/*/.cache",/swapfile,$logfile'
+
 excludedByUser='/export,"/home/*/.cache",$logfile'
 # --- end config
 
-# Partition attributes are named as in
-# % lsblk -PO /dev/sda1
-# [filtered]
-# NAME="sda1" PATH="/dev/sda1" FSTYPE="vfat" FSUSED="24.1M" FSUSE%="12%" FSVER="FAT32" MOUNTPOINT="/boot/efi" LABEL="EFI" UUID="67E3-17ED" PTUUID="b5ca7ab4-d564-49a1-a43b-d9125d4dcbab" PTTYPE="gpt" PARTTYPE="c12a7328-f81f-11d2-ba4b-00a0c93ec93b" PARTTYPENAME="EFI System" PARTLABEL="EFI System Partition" PARTUUID="05bdacf6-78ff-451d-8c4d-bb812fd68e83" PKNAME="sda"
- 
+# Partition attributes are named as in 
 # Many attributes look similar, I use LABEL and UUID, not PARTLABEL and PTUUID, PARTUUID.
 
 alias lsblkn='lsblk -n'
-
-#########
-# TESTS #
-#########
-
-# # Are all UUIDs distinct?
-# [[ -n $(lsblkn -o UUID|grep '\S'|sort|uniq --repeated) ]]&&{echo "Error: not all UUIDs are distinct.  Did you use dd?";exit 1}
-
-# # Does only one partition exists with LABEL $UbuntuLabel?
-# [[ $(lsblkn -o LABEL|grep -x $UbuntuLabel|wc -l) != 1 ]]&&{echo "Error: $UbuntuLabel is not unique.";exit 1}
-
-# # Does only one partition exists with LABEL $UbuntuBackupLabel?
-# [[ $(lsblkn -o LABEL|grep -x $UbuntuBackupLabel|wc -l) != 1 ]]&&{echo "Error: $UbuntuBackupLabel is not unique.";exit 1}
 
 #######################################
 # DETERMINE PARTITION PATHS AND UUIDS #
