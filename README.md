@@ -6,6 +6,8 @@ Quite useful command throughout the whole process (in case you don't know) `lsbl
 Pay attantion which ones you are using so you don't reset you main system by the accident :)
 
 After that you may need to run boot-repair on the ubuntu that you have on you local machine. 
+
+
 [Boot-repair instruction](https://help.ubuntu.com/community/Boot-Repair)
 
 In case you cannot get to the the system (grub terminal on the launch) follow [stackechange post](https://unix.stackexchange.com/questions/329926/grub-starts-in-command-line-after-reboot/330852#330852).
