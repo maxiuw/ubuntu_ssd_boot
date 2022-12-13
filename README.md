@@ -1,5 +1,6 @@
 # ubuntu_ssd_boot
 Script and instruction how to create multiple bootable ubuntu ssd drives
+Majority of the code was written by Pierre ALBARÈDE, the author of [this post](https://askubuntu.com/questions/1267225/how-to-create-a-bootable-clone-of-boot-disk/1333501#1333501).
 
 ## 1. Create first bootable disk follow [this post](https://campus-rover.gitbook.io/lab-notebook/infrastructure/ssd-instructions).
 Quite useful command throughout the whole process (in case you don't know) `lsblk` listing all connected devices and their partitions.
