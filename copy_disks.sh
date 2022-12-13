@@ -5,6 +5,7 @@
 # Pierre ALBARÈDE 2021/4/24
 # tested with Ubuntu 20.10
 
+
 # Assumptions:
 # - /boot is not on a separate partition.
 # - root partition has label $UbuntuLabel and the first partition on the same device is the EFI system partition,
