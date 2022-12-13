@@ -16,7 +16,11 @@ In case you cannot get to the the system (grub terminal on the launch) follow [s
 
 ## 3. Create an image of echa partition (4 images according to the tutorial)
 To do that we avoid creating 500gb (im my case) image of the ssd drive. Instead we have 4 images occupying ~40gb together (you can make it much smaller)
+
+
 `sudo dd if=/dev/sdXi of=sdXi.iso bs=4M status=progress`
+
+
 ## 4. No put the script _copy_disks.sh in the folder where the images are and run
 
 `sudo sh copy_disks.sh sdX sdY` 
