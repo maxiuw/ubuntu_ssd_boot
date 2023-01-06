@@ -5,6 +5,8 @@ Majority of the code was written by Pierre ALBARÈDE, the author of [this post](
 ## 1. Create first bootable disk follow [this post](https://campus-rover.gitbook.io/lab-notebook/infrastructure/ssd-instructions).
 Quite useful command throughout the whole process (in case you don't know) `lsblk` listing all connected devices and their partitions.
 Pay attantion which ones you are using so you don't reset you main system by the accident :)
+Important note: for the future reference do not seperate /home and /, that creates weird problems. Instead create a large enough / partition and proceed with that.  
+
 
 After that you may need to run boot-repair on the ubuntu that you have on you local machine. 
 
